@@ -21,4 +21,9 @@ Lectures/Notes from Udacity Programming for Data Science
 User Guide from Pandas https://pandas.pydata.org/docs/user_guide/10min.html  
 User Guide from Python https://docs.python.org/3/library/time.html  
 
+### Program Used to Build Python Script
+Jetbrains Pycharm Community Edition
+
+
+
 
