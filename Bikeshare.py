@@ -154,6 +154,7 @@ def main():
         display_data(df)
         redo = input('Would you like to restart the program? Enter "Yes" or "No"\n')
         if redo.title() != 'Yes':
+            print('Thank you for using the program, Have a great day!')
             break
 
 
