@@ -15,10 +15,10 @@ Details about the Customers (Age/Gender/Type of Customer)
 This project will need to accompained with the csv files of each of the 3 cities (Chicago, New York City, Washington).
 
 ### Credits
-https://automatetheboringstuff.com/
-https://www.sharpsightlabs.com/blog/pandas-iloc/
-Lectures/Notes from Udacity Programming for Data Science
-User Guide from Pandas https://pandas.pydata.org/docs/user_guide/10min.html
-User Guide from Python https://docs.python.org/3/library/time.html
+https://automatetheboringstuff.com/  
+https://www.sharpsightlabs.com/blog/pandas-iloc/  
+Lectures/Notes from Udacity Programming for Data Science  
+User Guide from Pandas https://pandas.pydata.org/docs/user_guide/10min.html  
+User Guide from Python https://docs.python.org/3/library/time.html  
 
 
