@@ -20,6 +20,7 @@ def get_filters():
     while city not in DEFINE_CITY:
         print("Please enter which city you would like to filter to: Chicago, New York City, Washington. "
               "Please answer with the full city name.")
+#get users input for particular city      
         city = input().title()
         if city not in DEFINE_CITY:
             print('This is not a valid input, please ensure you are entering the full city name. Let us try again!')
@@ -30,7 +31,7 @@ def get_filters():
     while month not in DEFINE_MONTH:
         print("Please enter which month you would like to filter to: January, February, March, April, May, June.Please "
               "answer with the full month name. If you do not require any filters, please enter All")
-
+#get users if they would like to filter for a particular month
         month = input().title()
         if month not in DEFINE_MONTH:
             print('This is not a valid input, please ensure you are entering the full month name. Let us try again!')
@@ -42,13 +43,14 @@ def get_filters():
             'Please enter which day you would like to filter to: Monday, Tuesday, Wednesday, Thursday, Friday, '
             'Saturday, Sunday.Please answer with the full month name. If you do not require any filters, please enter '
             'All')
+#get users if they would like to filter for a particular day of the week            
         day = input().title()
         if day not in DEFINE_DAY_OF_WEEK:
             print('This is not a valid input, please ensure you are entering the full name of the specific day')
     print('You have selected ' + day.title())
     return city, month, day
 
-
+#Load data using the particular fields mentioned above   
 def load_data(city, month, day):
     df = pd.read_csv(CITY_DATA[city])
     df['month'] = pd.to_datetime(df['Start Time']).dt.month
@@ -60,7 +62,7 @@ def load_data(city, month, day):
         df = df[df['day'] == day.title()]
     return df
 
-
+#Generate statistics around popular month/day of the week/hour
 def time_stat(df):
     start_time = time.time()
     popular_month_1 = df['month'].mode()[0]
@@ -77,7 +79,7 @@ def time_stat(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
-
+#Generate statistics around most popular stations
 def station_stats(df):
     start_time = time.time()
     most_used_start_station = df['Start Station'].mode()[0]
@@ -93,7 +95,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
-
+#Generate statistics around trip duration
 def trip_duration_stats(df):
     start_time = time.time()
     total_travel_time = df['Trip Duration'].sum()
@@ -107,7 +109,7 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
-
+#Generate statistic on the customers details
 def user_stats(df):
     start_time = time.time()
 
@@ -127,7 +129,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
-
+#Provide user option to view raw data
 def display_data(df):
     top_row = 0
     bottom_row = 5
